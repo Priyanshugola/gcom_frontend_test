@@ -58,26 +58,26 @@ const ShopContextProvider = (props) => {
         }
         return total_amt;
     }
-    const get_product = async () => {
-    try {
-        const response = await axios.get(`${backend_url}/api/product/list`);
-        // console.log(response.data);
-        if(response.data.success){
-            setproduct(response.data.products)
-            console.log(response.data.products)
-        }else{
-            toast.error(response.data.message)
-        }
+    // const get_product = async () => {
+    // try {
+    //     const response = await axios.get(`${backend_url}/api/product/list`);
+    //     // console.log(response.data);
+    //     if(response.data.success){
+    //         setproduct(response.data.products)
+    //         console.log(response.data.products)
+    //     }else{
+    //         toast.error(response.data.message)
+    //     }
         
-    } catch (error) {
-        onsole.log(error);
-        toast.error(error.message)
-    }
-    };
+    // } catch (error) {
+    //     onsole.log(error);
+    //     toast.error(error.message)
+    // }
+    // };
 
-    useEffect(() => {
-    get_product();
-    }, []);
+    // useEffect(() => {
+    // get_product();
+    // }, []);
 
 
 
